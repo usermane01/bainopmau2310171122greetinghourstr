@@ -46,9 +46,19 @@ greeting('21:00')            | Good evening!          | 13
 greeting('2100')             | Good evening!          | 14
 
 """
-#endregion debai
+#endregion 
+def greeting(hour_str):
+  hour_str = hour_str.upper()
+  for a in range(-1,13):
+    for b in range(13,25):
+      if hour_str == '1PM'or hour_str==13:
+        return 'Good afternoon!'
+      elif 'AM' in hour_str or str(a) in hour_str:
+        return 'Good morning!'
+      elif 'PM' in hour_str or str(b) in hour_str:
+        return 'Good evening!'
+
 
 #region bailam
-def greeting(hour_str):
-  return 'todo'
+
 #endregion bailam
